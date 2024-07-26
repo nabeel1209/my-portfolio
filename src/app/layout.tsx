@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     // className='scroll-smooth'
-    <html lang="en" >
+    <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${sora.variable} ${poppins.variable} bg-[#0f0615]`}>{children}</body>
     </html>
   );

@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faInstagram, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
-export default function BioSection(){
+import { forwardRef } from "react";
+
+const BioSection = forwardRef(function BioSection(props, ref){
     return(
-        <section className='relative w-full p-8 flex flex-col items-center gap-5 mt-16'>
+        <section className='relative w-full p-8 flex flex-col items-center gap-5 mt-16 scroll-mt-16' ref={ref as any}>
           <div className='w-48 h-48 p-1 bg-gradient-to-r from-[#7b57c1] to-[#f4eafd] rounded-full'>
           <Image className="w-[184px] h-[184px] bg-[#0f0615] rounded-full" src="/images/fotodiri.png" alt="" width={500} height={500}></Image>
           </div>
@@ -23,4 +25,5 @@ export default function BioSection(){
           </div>
       </section>
     )
-}
+})
+export default BioSection;

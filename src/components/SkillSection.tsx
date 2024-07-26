@@ -1,68 +1,101 @@
 import Image from "next/image"
+import { forwardRef, MutableRefObject, useEffect, useRef, useState } from "react"
 type skillData ={
     src:string, 
     name:string,
     width:number, 
     height:number,
 }
-// function changePage(param:string){
-//     const targetElement = document.getElementById(param) as any
-//     targetElement.style.background = "white";
-//     targetElement.style.webkitTextFillColor = "#0f0615";
-//     const skillTypeElement = document.getElementById("skill-type") as any 
-//     for(let i=0; i<skillTypeElement.children.length;i++){
-//       let child = skillTypeElement.children.item(i)
-//       if(child.id != param){
-//         child.style.background = "#0f0615";
-//         child.style.webkitTextFillColor = "white";
-//       }
-//     }
-//     const skillGrid = document.getElementById("skill-grid") as any
-//     if(param == 'languages'){
-//       skillGrid.innerHTML = '<div class="skills"><img src="images/python.png" alt="" class="skills-img">Python</div>'+
-//                             '<div class="skills"><img src="images/java.png" alt="" class="skills-img">Java</div>'+
-//                             '<div class="skills"><img src="images/javascript.png" alt="" class="skills-img">Javascript</div>';
-//     }else if(param == 'libraries'){
-//       // skillGrid.innerHTML = '<div class="skills"><img src="images/pandas.png" alt="" class="skills-img">Pandas</div>'+
-//       //                       '<div class="skills"><img src="images/matplotlib.png" alt="" class="skills-img">Matplotlib</div>';
-//       skillGrid.innerHTML = '';
-//     }else if(param == 'frameworks'){
-//       // skillGrid.innerHTML = '<div class="skills"><img src="images/django.png" alt="" class="skills-img">Django</div>';
-//       skillGrid.innerHTML = '';
-//     }else if(param =='databases'){
-//       // skillGrid.innerHTML = '<div class="skills"><img src="images/mysql.png" alt="" class="skills-img">MySQL</div>';
-//       skillGrid.innerHTML = ''
-//     }else if (param == 'other'){
-//       skillGrid.innerHTML = '<div class="skills"><img src="images/figma.png" alt="" class="skills-img">Figma</div>'
-//     }
-//   }
 
 function Skill(data:skillData){
     return(
         <div className="flex flex-col gap-2 w-28 p-1 justify-center items-center text-white font-sora font-semibold text-lg group-hover:hover:opacity-100 group-hover:hover:scale-100 group-hover:opacity-50 group-hover:scale-95  transition-all duration-500 ease-in-out">
-            <Image src={data.src} alt="" className="w-16" width={data.width} height={data.height}/>{data.name}
+            <Image src={data.src} alt="" className="w-auto h-16 rounded-xl" width={data.width} height={data.height}/>{data.name}
         </div>
     )
 }
-
-export default function SkillSection(){
+function LanguagesPages(){
     return(
-        <section className='relative w-full p-8 mt-16 flex flex-col gap-5'>
+        <div className="p-4 py-6 rounded-3xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-around gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out">
+            <Skill src="/images/skills/python.png" width={1869} height={1869} name="Python"></Skill>
+            <Skill src="/images/skills/java.png" width={1869} height={1869} name="Java"></Skill>
+            <Skill src="/images/skills/javascript.png" width={1869} height={1869} name="Javascript"></Skill>
+            <Skill src="/images/skills/typescript.png" width={1869} height={1869} name="Typescript"></Skill>
+        </div>
+    )
+}
+function LibrariesPages(){
+    return(
+        <div className="p-4 py-6 rounded-3xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-around gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out">
+            <Skill src="/images/skills/next-auth.png" width={1869} height={1869} name="Next-Auth"></Skill>
+        </div>
+    )
+}
+function FrameworksPages(){
+    return(
+        <div className="p-4 py-6 rounded-3xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-around gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out">
+            <Skill src="/images/skills/nextjs.png" width={1869} height={1869} name="Next.js"></Skill>
+        </div>
+    )
+}
+function DatabasesPages(){
+    return(
+        <div className="p-4 py-6 rounded-3xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-around gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out">
+            <Skill src="/images/skills/firebase.png" width={1869} height={1869} name="Firebase"></Skill>
+        </div>
+    )
+}
+function OtherPages(){
+    return(
+        <div className="p-4 py-6 rounded-3xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-around gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out">
+            <Skill src="/images/skills/figma.png" width={1869} height={1869} name="Figma"></Skill>
+        </div>
+    )
+}
+function PagesSelector(data:{page:MutableRefObject<HTMLDivElement>, pageList:MutableRefObject<HTMLDivElement>[]}){
+    useEffect(()=>{
+        for(let page of data.pageList){
+            if(data.page == page){
+                page.current.style.backgroundColor = "white";
+                page.current.style.webkitTextFillColor = "#0f0615";
+            }else{
+                page.current.style.backgroundColor ="#0f0615";
+                page.current.style.webkitTextFillColor = "white";
+            }
+        }
+    })
+    switch(data.page){
+        case data.pageList.at(0): return <LanguagesPages/>
+        case data.pageList.at(1):return <LibrariesPages/>
+        case data.pageList.at(2):return <FrameworksPages/>
+        case data.pageList.at(3):return <DatabasesPages/>
+        case data.pageList.at(4):return <OtherPages/>
+    }
+    return(<></>)
+}
+
+const SkillSection = forwardRef(function SkillSection(props, ref){
+    const languages = useRef() as MutableRefObject<HTMLDivElement>;
+    const libraries = useRef() as MutableRefObject<HTMLDivElement>;
+    const frameworks = useRef() as MutableRefObject<HTMLDivElement>;
+    const databases = useRef() as MutableRefObject<HTMLDivElement>;
+    const other = useRef() as MutableRefObject<HTMLDivElement>;
+    const pageList = [languages, libraries, frameworks, databases, other]
+    const [pages, setPages] = useState(languages);
+    return(
+        <section className='relative w-full p-8 mt-16 flex flex-col gap-5 scroll-mt-16' ref={ref as any}>
             <h1 className='font-sora font-bold text-white text-3xl text-center'>Skills</h1>
             <div className="flex flex-col gap-4">
-                <div className="flex gap-2 w-full flex-wrap justify-center text-lg font-inter text-white font-medium">
-                    <div className="py-2 px-4 bg-white text-black rounded-xl hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer">Languages</div>
-                    <div className="py-2 px-4 hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer">Libraries</div>
-                    <div className="py-2 px-4 hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer">Frameworks</div>
-                    <div className="py-2 px-4 hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer">Database</div>
-                    <div className="py-2 px-4 hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer">Other</div>
+                <div className="flex gap-2 w-full flex-wrap justify-center text-[1rem] font-inter text-white font-medium text-">
+                    <div className="py-2 px-4 rounded-xl hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer" ref={languages} onClick={(e)=>setPages(languages)}>Languages</div>
+                    <div className="py-2 px-4 hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer rounded-xl" ref={libraries} onClick={(e)=>setPages(libraries)}>Libraries</div>
+                    <div className="py-2 px-4 hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer rounded-xl" ref={frameworks} onClick={(e)=>setPages(frameworks)}>Frameworks</div>
+                    <div className="py-2 px-4 hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer rounded-xl" ref={databases} onClick={(e)=>setPages(databases)}>Databases</div>
+                    <div className="py-2 px-4 hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer rounded-xl" ref={other} onClick={(e)=>setPages(other)}>Other</div>
                 </div>
-                <div className="p-4 rounded-2xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-around gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out">
-                    <Skill src="/images/python.png" width={1869} height={1869} name="Python"></Skill>
-                    <Skill src="/images/python.png" width={1869} height={1869} name="Python"></Skill>
-                    <Skill src="/images/python.png" width={1869} height={1869} name="Python"></Skill>
-                </div>
+                <PagesSelector page={pages} pageList={pageList}/>
             </div>
         </section>
     )
-}
+})
+export default SkillSection;

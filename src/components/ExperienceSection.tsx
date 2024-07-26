@@ -30,12 +30,12 @@ export default function ExperienceSection(){
           <h1 className='font-sora font-bold text-3xl'>Experiences</h1>
           <p className='font-inter font-normal text-center'>Showcasing my organizational background and significant contributions, emphasizing my ability to foster teamwork, lead initiatives, and achieve collective goals in different settings.</p>
         </div>
-        <div className='w-full p-4 flex flex-col bg-[#ffffff17] rounded-2xl gap-5 h-[525px] overflow-y-scroll'>
-          <Experience src='/images/fuki.png' width={480} height={480} position='ITF Staff' org='Forum Ukhuwah dan Kajian Islam Fasilkom UI' date='Jun 2024 - Present'/>
-          <Experience src='/images/ddp0.jpg' width={800} height={800} position='Student Mentor' org='Dasar-Dasar Pemrograman 0' date='Jun 2024 - Present'/>
-          <Experience src='/images/compfest.png' width={1860} height={1860} position='Event Staff' org='Compfest' date='May 2024 - Present'/>
-          <Experience src='/images/betis.jpg' width={200} height={200} position='Student Mentor' org='BETIS Fasilkom UI' date='Nov 2023'/>
-          <Experience src='/images/gaung.jpg' width={1080} height={1080} position='PIC of Operational Division' org='Gathering CSUI 23' date='Jun 2024 - Present'/>
+        <div className='w-full p-4 flex flex-col bg-[#ffffff17] rounded-2xl gap-5 h-[525px] overflow-y-scroll overflow-x-hidden'>
+          <Experience src='/images/experiences/fuki.png' width={480} height={480} position='ITF Staff' org='Forum Ukhuwah dan Kajian Islam Fasilkom UI' date='Jun 2024 - Present'/>
+          <Experience src='/images/experiences/ddp0.jpg' width={800} height={800} position='Student Mentor' org='Dasar-Dasar Pemrograman 0' date='Jun 2024 - Present'/>
+          <Experience src='/images/experiences/compfest.png' width={1860} height={1860} position='Event Staff' org='Compfest' date='May 2024 - Present'/>
+          <Experience src='/images/experiences/betis.jpg' width={200} height={200} position='Student Mentor' org='BETIS Fasilkom UI' date='Nov 2023'/>
+          <Experience src='/images/experiences/gaung.jpg' width={1080} height={1080} position='PIC of Operational Division' org='Gathering CSUI 23' date='Jun 2024 - Present'/>
         </div>
       </section>)
 }
