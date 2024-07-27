@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     // className='scroll-smooth'
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${sora.variable} ${poppins.variable} bg-[#0f0615]`}>{children}</body>
+      <body className={`${inter.variable} ${sora.variable} ${poppins.variable} bg-[#0f0615] w-screen flex flex-col justify-center items-center overflow-x-hidden`}>{children}</body>
     </html>
   );
 }

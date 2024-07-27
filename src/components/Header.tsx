@@ -46,18 +46,19 @@ export default function Header(props:{refList:MutableRefObject<HTMLDivElement>[]
     const menu2 = useRef() as MutableRefObject<HTMLSpanElement>;
     const menu3 = useRef() as MutableRefObject<HTMLSpanElement>;
     return(
-        <header className='fixed p-8 pt-20 w-[12.5rem] h-screen bg-[#ffffff17] rounded-r-3xl backdrop-blur-[0.5rem] top-0 left-0 flex flex-col justify-start z-50 -translate-x-full' ref={header}>
-            <div className='flex flex-col mt-5 mb-2 gap-3'>
-                <Image className='w-16' src='/images/LOGO.png' alt='' width={1500} height={1500}></Image>
-                <h1 className='font-poppins text-white font-semibold text-2xl'>Nabeel Muhammad</h1>
+        <header className='fixed p-8 pt-20 w-[12.5rem] h-screen bg-[#ffffff17] rounded-r-3xl backdrop-blur-[0.5rem] top-0 flex flex-col justify-start z-50 -translate-x-full self-start lg:translate-x-0 lg:self-center lg:w-[90%] lg:p-0 lg:h-[4.4rem] lg:flex-row lg:top-3 lg:rounded-full lg:items-center lg:px-4  lg:justify-between' ref={header}>
+            <div className='flex flex-col mt-5 mb-2 gap-3 lg:flex-row lg:h-20 lg:m-0 lg:items-center lg:gap-4'>
+                <a href="https://nabeelmuhammad.vercel.app/"><Image className='w-16 lg:w-auto lg:h-12' src='/images/LOGO.png' alt='' width={1500} height={1500}></Image></a>
+                <h1 className='font-poppins text-white font-semibold text-2xl lg:text-xl xl:text-2xl'>Nabeel Muhammad</h1>
+                
             </div>
-            <nav className='flex flex-col gap-8 my-16'>
-                <a className='font-inter text-white font-normal text-lg p-1 cursor-pointer' onClick={(e)=>{scrollTo(props.refList[0]);setOpenMenu(!openMenu);handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}>Home</a>
-                <a className='font-inter text-white font-normal text-lg p-1 cursor-pointer' onClick={(e)=>{scrollTo(props.refList[1]);setOpenMenu(!openMenu);handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}>About</a>
-                <a className='font-inter text-white font-normal text-lg p-1 cursor-pointer' onClick={(e)=>{scrollTo(props.refList[2]);setOpenMenu(!openMenu);handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}>Projects</a>
-                <a className='font-inter text-white font-normal text-lg p-1 cursor-pointer' onClick={(e)=>{scrollTo(props.refList[3]);setOpenMenu(!openMenu);handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}>Skills</a>
+            <nav className='flex flex-col gap-8 my-16 font-inter text-white font-normal text-lg p-1 lg:flex-row lg:gap-20 lg:text-[1rem] lg:items-center lg:my-0 lg:mr-12 lg:select-none'>
+                <a className='cursor-pointer hover:font-medium hover:scale-105 lg:text-center lg:w-16 transition-all duration-500' onClick={(e)=>{scrollTo(props.refList[0]);if(window.innerWidth<1024){setOpenMenu(!openMenu);handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}}>Home</a>
+                <a className='cursor-pointer hover:font-medium hover:scale-105 lg:text-center lg:w-16 transition-all duration-500' onClick={(e)=>{scrollTo(props.refList[1]);if(window.innerWidth<1024){setOpenMenu(!openMenu);handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}}>About</a>
+                <a className='cursor-pointer hover:font-medium hover:scale-105 lg:text-center lg:w-16 transition-all duration-500' onClick={(e)=>{scrollTo(props.refList[2]);if(window.innerWidth<1024){setOpenMenu(!openMenu);handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}}>Projects</a>
+                <a className='cursor-pointer hover:font-medium hover:scale-105 lg:text-center lg:w-16 transition-all duration-500' onClick={(e)=>{scrollTo(props.refList[3]);if(window.innerWidth<1024){setOpenMenu(!openMenu);handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}}>Skills</a>
             </nav>
-            <div className='fixed -right-7 top-6 w-10 h-[2.083125rem] translate-x-full justify-between flex flex-col cursor-pointer' onClick={(e)=>{handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}>
+            <div className='fixed -right-7 top-6 w-10 h-[2.083125rem] translate-x-full justify-between flex flex-col cursor-pointer lg:hidden' onClick={(e)=>{handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}>
                 <span className='w-full h-[0.3125rem] bg-[#ffffffb0] backdrop-blur-[8px] rounded-full origin-[left_center]' ref={menu1}></span>
                 <span className='w-full h-[0.3125rem] bg-[#ffffffb0] backdrop-blur-[8px] rounded-full origin-center' ref={menu2}></span>
                 <span className='w-full h-[0.3125rem] bg-[#ffffffb0] backdrop-blur-[8px] rounded-full origin-[left_center]' ref={menu3}></span>

@@ -42,4 +42,9 @@
 .bg-clip-text {
     -webkit-background-clip: text;
     background-clip: text;
-  }
+}
+@media (min-width: 1024px){
+    .lg\:no-scrollbar::-webkit-scrollbar{
+        display:none
+    }
+}
