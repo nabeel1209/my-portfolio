@@ -26,26 +26,26 @@ function LanguagesPages() {
     <div className="p-4 py-6 rounded-3xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-evenly gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out lg:gap-x-4">
       <Skill
         src="/images/skills/python.png"
-        width={1869}
-        height={1869}
+        width={1269}
+        height={1269}
         name="Python"
       ></Skill>
       <Skill
         src="/images/skills/java.png"
-        width={1869}
-        height={1869}
+        width={1269}
+        height={1269}
         name="Java"
       ></Skill>
       <Skill
         src="/images/skills/javascript.png"
-        width={1869}
-        height={1869}
+        width={1269}
+        height={1269}
         name="Javascript"
       ></Skill>
       <Skill
         src="/images/skills/typescript.png"
-        width={1869}
-        height={1869}
+        width={1269}
+        height={1269}
         name="Typescript"
       ></Skill>
       
@@ -57,9 +57,15 @@ function LibrariesPages() {
     <div className="p-4 py-6 rounded-3xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-evenly gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out lg:gap-x-4">
       <Skill
         src="/images/skills/next-auth.png"
-        width={1869}
-        height={1869}
+        width={1269}
+        height={1269}
         name="Next-Auth"
+      ></Skill>
+      <Skill
+        src="/images/skills/react.png"
+        width={1269}
+        height={1269}
+        name="React"
       ></Skill>
     </div>
   );
@@ -69,8 +75,8 @@ function FrameworksPages() {
     <div className="p-4 py-6 rounded-3xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-evenly gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out lg:gap-x-4">
       <Skill
         src="/images/skills/nextjs.png"
-        width={1869}
-        height={1869}
+        width={1269}
+        height={1269}
         name="Next.js"
       ></Skill>
     </div>
@@ -81,8 +87,8 @@ function DatabasesPages() {
     <div className="p-4 py-6 rounded-3xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-evenly gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out lg:gap-x-4">
       <Skill
         src="/images/skills/firebase.png"
-        width={1869}
-        height={1869}
+        width={1269}
+        height={1269}
         name="Firebase"
       ></Skill>
     </div>
