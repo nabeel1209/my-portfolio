@@ -21,7 +21,7 @@ const BioSection = forwardRef(function BioSection(props, ref){
                 <a href="https://www.instagram.com/nblmhd__/" target="_blank"><FontAwesomeIcon className='hover:scale-125 transition-all duration-500 ease-in-out' icon={faInstagram}/></a>
                 <a href="https://x.com/addictedtomath" target="_blank"><FontAwesomeIcon className='hover:scale-125 transition-all duration-500 ease-in-out' icon={faXTwitter}/></a>
             </div>
-            <a className='w-3/5 lg:w-4/5' href="/pdfs/NabeelMuhammad_CV.pdf" download=""><button className='w-full h-10 bg-white text-[#0f0615] rounded-xl font-sora font-bold flex justify-evenly p-2 hover:scale-105 transition-all duration-500 ease-in-out items-center lg:text-sm'>View CV<Image className='w-auto h-6' src="/images/downloaddark.png" alt='' width={512} height={512}></Image></button></a>
+            <a className='w-3/5 lg:w-4/5' href="/pdfs/NabeelMuhammad_CV.pdf" download=""><button className='w-full h-10 bg-white text-[#0f0615] rounded-xl font-sora font-bold flex justify-evenly p-2 hover:scale-105 transition-all duration-500 ease-in-out items-center lg:text-sm'>View CV<Image className='w-auto h-5' src="/images/downloaddark.png" alt='' width={512} height={512}></Image></button></a>
           </div>
       </section>
     )
