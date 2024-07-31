@@ -39,6 +39,12 @@ function scrollTo(ref:MutableRefObject<HTMLDivElement>){
     ref.current.scrollIntoView();
 }
 
+function animate(ref:MutableRefObject<HTMLDivElement>, refList:MutableRefObject<HTMLDivElement>[]){
+    if(ref == refList[0]){
+        
+    }
+}
+
 export default function Header(props:{refList:MutableRefObject<HTMLDivElement>[]}){
     const [openMenu, setOpenMenu] = useState(false);
     const header = useRef() as MutableRefObject<HTMLDivElement>;

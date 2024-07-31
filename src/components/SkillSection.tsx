@@ -79,6 +79,12 @@ function FrameworksPages() {
         height={1269}
         name="Next.js"
       ></Skill>
+      <Skill
+        src="/images/skills/tailwind.png"
+        width={1269}
+        height={1269}
+        name="TailwindCSS"
+      ></Skill>
     </div>
   );
 }

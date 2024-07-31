@@ -23,7 +23,7 @@ const HeroSection = forwardRef(function HeroSection(props, ref){
         heroImage.current.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)';
       });
       heroImage.current.addEventListener('mouseup',()=>{
-        heroImage.current.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
+        heroImage.current.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)';
       });
     }
   })
