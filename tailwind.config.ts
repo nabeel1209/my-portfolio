@@ -27,8 +27,6 @@ const config: Config = {
           midSlideLeft:'midSlideLeft 1s ease-in-out',
           botSlideRight:'botSlideRight 1s ease-in-out',
           botSlideLeft:'botSlideLeft 1s ease-in-out',
-          headingHeroAnimation:'headingHeroAnimation 1s ease-in-out',
-          
       },
       keyframes:{
         navSlideRight:{
@@ -62,10 +60,6 @@ const config: Config = {
         botSlideLeft:{
           "from":{transform:'rotate(-45deg)'},
           "to":{transform:'rotate(0deg)'}
-        },
-        headingHeroAnimation:{
-          "from":{transform: "translateX(-50%)"},
-          "to":{transform: "translateX(0%)"}
         }
       }
     },

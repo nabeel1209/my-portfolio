@@ -19,7 +19,7 @@ function Project(data:projectData){
             </a>
             <div className='p-1 flex flex-col lg:w-[48%] lg:gap-2'>
               <p className='font-inter font-semibold text-[#DEDEDE] tracking-wide text-sm lg:text-[1rem]'>{data.type}</p>
-              <h1 className='font-sora font-bold text-white text-xl lg:text-4xl'><a href={data.href}>{data.title}</a></h1>
+              <h1 className='font-sora font-bold text-white text-xl lg:text-4xl'><a target="_blank" href={data.href}>{data.title}</a></h1>
               <p className='font-inter font-normal text-[#D4D4D4] text-sm lg:text-[1rem] lg:w-[90%] lg:leading-tight'>{data.desc}</p>
             </div>
         </div>
