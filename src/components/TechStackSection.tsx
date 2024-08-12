@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { forwardRef, MutableRefObject, useEffect, useRef, useState} from "react";
-type skillData = {
+type TechStackData = {
   src: string;
   name: string;
   width: number;
   height: number;
 };
 
-function Skill(data: skillData) {
+function TechStack(data: TechStackData) {
   return (
     <div className="flex flex-col gap-2 w-28 p-1 justify-center items-center text-white font-sora font-semibold text-lg group-hover:hover:opacity-100 group-hover:hover:scale-100 group-hover:opacity-50 group-hover:scale-95  transition-all duration-500 ease-in-out lg:w-32">
       <Image
@@ -24,30 +24,30 @@ function Skill(data: skillData) {
 function LanguagesPages() {
   return (
     <div className="p-4 py-6 rounded-3xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-evenly gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out lg:gap-x-4">
-      <Skill
-        src="/images/skills/python.png"
+      <TechStack
+        src="/images/techStack/python.png"
         width={383}
         height={383}
         name="Python"
-      ></Skill>
-      <Skill
-        src="/images/skills/java.png"
+      ></TechStack>
+      <TechStack
+        src="/images/techStack/java.png"
         width={383}
         height={383}
         name="Java"
-      ></Skill>
-      <Skill
-        src="/images/skills/javascript.png"
+      ></TechStack>
+      <TechStack
+        src="/images/techStack/javascript.png"
         width={383}
         height={383}
         name="Javascript"
-      ></Skill>
-      <Skill
-        src="/images/skills/typescript.png"
+      ></TechStack>
+      <TechStack
+        src="/images/techStack/typescript.png"
         width={383}
         height={383}
         name="Typescript"
-      ></Skill>
+      ></TechStack>
       
     </div>
   );
@@ -55,66 +55,66 @@ function LanguagesPages() {
 function LibrariesPages() {
   return (
     <div className="p-4 py-6 rounded-3xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-evenly gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out lg:gap-x-4">
-      <Skill
-        src="/images/skills/next-auth.png"
+      <TechStack
+        src="/images/techStack/next-auth.png"
         width={383}
         height={383}
         name="Next-Auth"
-      ></Skill>
-      <Skill
-        src="/images/skills/react.png"
+      ></TechStack>
+      <TechStack
+        src="/images/techStack/react.png"
         width={383}
         height={383}
         name="React"
-      ></Skill>
+      ></TechStack>
     </div>
   );
 }
 function FrameworksPages() {
   return (
     <div className="p-4 py-6 rounded-3xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-evenly gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out lg:gap-x-4">
-      <Skill
-        src="/images/skills/nextjs.png"
+      <TechStack
+        src="/images/techStack/nextjs.png"
         width={383}
         height={383}
         name="Next.js"
-      ></Skill>
-      <Skill
-        src="/images/skills/tailwind.png"
+      ></TechStack>
+      <TechStack
+        src="/images/techStack/tailwind.png"
         width={383}
         height={383}
         name="TailwindCSS"
-      ></Skill>
+      ></TechStack>
     </div>
   );
 }
 function DatabasesPages() {
   return (
     <div className="p-4 py-6 rounded-3xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-evenly gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out lg:gap-x-4">
-      <Skill
-        src="/images/skills/firebase.png"
+      <TechStack
+        src="/images/techStack/firebase.png"
         width={383}
         height={383}
         name="Firebase"
-      ></Skill>
+      ></TechStack>
     </div>
   );
 }
 function OtherPages() {
   return (
     <div className="p-4 py-6 rounded-3xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-evenly gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out lg:gap-x-4">
-      <Skill
-        src="/images/skills/figma.png"
+      <TechStack
+        src="/images/techStack/figma.png"
         width={383}
         height={383}
         name="Figma"
-      ></Skill>
-      <Skill
-        src="/images/skills/git.png"
+      ></TechStack>
+      <TechStack
+        src="/images/techStack/git.png"
         width={383}
         height={383}
         name="Git"
-      ></Skill>
+      ></TechStack>
     </div>
   );
 }
@@ -148,7 +148,7 @@ function PagesSelector(data: {
   return <></>;
 }
 
-const SkillSection = forwardRef(function SkillSection(props, ref) {
+const TechStackSection = forwardRef(function TechStackSection(props, ref) {
   const languages = useRef() as MutableRefObject<HTMLDivElement>;
   const libraries = useRef() as MutableRefObject<HTMLDivElement>;
   const frameworks = useRef() as MutableRefObject<HTMLDivElement>;
@@ -207,4 +207,4 @@ const SkillSection = forwardRef(function SkillSection(props, ref) {
     </section>
   );
 });
-export default SkillSection;
+export default TechStackSection;
