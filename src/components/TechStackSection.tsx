@@ -56,12 +56,6 @@ function LibrariesPages() {
   return (
     <div className="p-4 py-6 rounded-3xl bg-[#ffffff17] grid grid-cols-[repeat(auto-fill,7rem)] grid-rows-[repeat(auto-fill,7rem)] justify-evenly gap-y-8 group hover:scale-105 transition-all duration-500 ease-in-out lg:gap-x-4">
       <TechStack
-        src="/images/techStack/next-auth.png"
-        width={383}
-        height={383}
-        name="Next-Auth"
-      ></TechStack>
-      <TechStack
         src="/images/techStack/react.png"
         width={383}
         height={383}

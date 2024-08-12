@@ -34,8 +34,9 @@ function Project(data:projectData){
                 <Project type='Web Development' title='Ca-Chat' desc='Welcome to Ca-Chat, a uniquely designed communication platform created exclusively for meaningful conversations between me and my loved one. Ca-Chat offers a private and secure space for me and my partner to share our thoughts, feelings, and moments without any distractions.' url="bg-[url('./../../public/images/projects/ca-chat.png')]" href="https://ca-chat.vercel.app/" techStack={(
                     <div className="w-fit h-9 flex justify-start items-center absolute bottom-3 gap-2 bg-[#4d4d4d42] p-2 rounded-xl lg:h-11 lg:p-3 lg:gap-3 lg:rounded-2xl">
                         <div className="w-5 h-5 lg:w-6 lg:h-6"><Image className="rounded-md" src="/images/techStack/typescript.png" alt="" width={200} height={200}/></div>
+                        <div className="w-5 h-5 lg:w-6 lg:h-6"><Image className="rounded-md" src="/images/techStack/react.png" alt="" width={200} height={200}/></div>
                         <div className="w-5 h-5 lg:w-6 lg:h-6"><Image className="rounded-md" src="/images/techStack/nextjs.png" alt="" width={200} height={200}/></div>
-                        <div className="w-5 h-5 lg:w-6 lg:h-6"><Image className="rounded-md" src="/images/techStack/next-auth.png" alt="" width={200} height={200}/></div>
+                        <div className="w-5 h-5 lg:w-6 lg:h-6"><Image className="rounded-md" src="/images/techStack/tailwind.png" alt="" width={200} height={200}/></div>
                         <div className="w-5 h-5 lg:w-6 lg:h-6"><Image className="rounded-md" src="/images/techStack/firebase.png" alt="" width={200} height={200}/></div>
                     </div>)}/>
                 <Project type='Coming Soon' title='Coming Soon' desc='Coming Soon' url="" href="" techStack={(<></>)}/>
