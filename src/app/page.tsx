@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import BioSection from '@/components/BioSection';
 import ProjectSection from '@/components/ProjectSection';
-import SkillSection from '@/components/SkillSection';
+import TechStackSection from '@/components/TechStackSection';
 import { MutableRefObject, useEffect, useRef } from 'react';
 
 export default function Home() {
@@ -31,8 +31,8 @@ export default function Home() {
       <HeroSection ref={hero}/>
       <BioSection ref={bio}/>
       <ExperienceSection/>
+      <TechStackSection ref={skill}/>
       <ProjectSection ref={project}/>
-      <SkillSection ref={skill}/>
       <div className="hidden lg:block fixed w-12 h-12 rounded-full z-50 bottom-0 left-0 border-solid pointer-events-none -translate-y-1/2 -translate-x-1/2 mix-blend-difference" ref={cursor}></div> 
       <footer className="font-sora font-2xl text-white text-center w-full bg-[#ffffff17] p-4 rounded-t-2xl font-normal mt-20 lg:mt-28">All rights reserved © 2024<br/>Nabeel Muhammad</footer>
     </main>

@@ -29,7 +29,7 @@ function Project(data:projectData){
  const ProjectSection = forwardRef(function ProjectSection(props, ref){
     return(
         <section className='relative w-full p-8 mt-16 flex flex-col items-center gap-4 scroll-mt-16 sm:w-[40rem] lg:w-[90%] lg:items-start' ref={ref as any}>
-            <h1 className='font-sora font-bold text-white text-3xl text-center xl:text-4xl'>Featured Projects</h1>
+            <h1 className='font-sora font-bold text-white text-3xl text-center xl:text-4xl'>Projects</h1>
             <div className='w-full h-[36.25rem] p-1 flex flex-col items-center gap-6 overflow-y-scroll overflow-x-hidden'>
                 <Project type='Web Development' title='Ca-Chat' desc='Welcome to Ca-Chat, a uniquely designed communication platform created exclusively for meaningful conversations between me and my loved one. Ca-Chat offers a private and secure space for me and my partner to share our thoughts, feelings, and moments without any distractions.' url="bg-[url('./../../public/images/projects/ca-chat.png')]" href="https://ca-chat.vercel.app/" techStack={(
                     <div className="w-fit h-9 flex justify-start items-center absolute bottom-3 gap-2 bg-[#4d4d4d42] p-2 rounded-xl lg:h-11 lg:p-3 lg:gap-3 lg:rounded-2xl">

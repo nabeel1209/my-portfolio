@@ -158,11 +158,11 @@ const SkillSection = forwardRef(function SkillSection(props, ref) {
   const [pages, setPages] = useState(languages);
   return (
     <section
-      className="relative w-full p-8 mt-16 flex flex-col gap-5 scroll-mt-16 sm:w-[40rem] lg:w-[85%] lg:items-start"
+      className="relative w-full p-8 mt-16 flex flex-col gap-5 scroll-mt-28 sm:w-[40rem] lg:w-[85%] lg:items-start lg:p-0"
       ref={ref as any}
     >
       <h1 className="font-sora font-bold text-white text-3xl text-center xl:text-4xl">
-        Skills
+        Tech Stack
       </h1>
       <div className="flex flex-col gap-4 lg:w-full">
         <div className="flex gap-2 w-full flex-wrap justify-center text-[1rem] font-inter text-white font-medium lg:text-[1.125rem] lg:w-fit">

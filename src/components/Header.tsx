@@ -56,13 +56,12 @@ export default function Header(props:{refList:MutableRefObject<HTMLDivElement>[]
             <div className='flex flex-col mt-5 mb-2 gap-3 lg:flex-row lg:h-20 lg:m-0 lg:items-center lg:gap-4'>
                 <a href="https://nabeelmuhammad.vercel.app/"><Image className='w-16 lg:w-auto lg:h-12' src='/images/LOGO.png' alt='' width={1500} height={1500}></Image></a>
                 <h1 className='font-poppins text-white font-semibold text-2xl lg:text-xl xl:text-2xl'>Nabeel Muhammad</h1>
-                
             </div>
             <nav className='flex flex-col gap-8 my-16 font-inter text-white font-normal text-lg p-1 lg:flex-row lg:gap-20 lg:text-[1rem] lg:items-center lg:my-0 lg:mr-12 lg:select-none'>
                 <a className='cursor-pointer hover:font-medium hover:scale-105 lg:text-center lg:w-16 transition-all duration-500' onClick={(e)=>{scrollTo(props.refList[0]);if(window.innerWidth<1024){setOpenMenu(!openMenu);handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}}>Home</a>
                 <a className='cursor-pointer hover:font-medium hover:scale-105 lg:text-center lg:w-16 transition-all duration-500' onClick={(e)=>{scrollTo(props.refList[1]);if(window.innerWidth<1024){setOpenMenu(!openMenu);handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}}>About</a>
+                <a className='cursor-pointer hover:font-medium hover:scale-105 lg:text-center lg:w-24 transition-all duration-500' onClick={(e)=>{scrollTo(props.refList[3]);if(window.innerWidth<1024){setOpenMenu(!openMenu);handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}}>Tech Stack</a>
                 <a className='cursor-pointer hover:font-medium hover:scale-105 lg:text-center lg:w-16 transition-all duration-500' onClick={(e)=>{scrollTo(props.refList[2]);if(window.innerWidth<1024){setOpenMenu(!openMenu);handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}}>Projects</a>
-                <a className='cursor-pointer hover:font-medium hover:scale-105 lg:text-center lg:w-16 transition-all duration-500' onClick={(e)=>{scrollTo(props.refList[3]);if(window.innerWidth<1024){setOpenMenu(!openMenu);handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}}>Skills</a>
             </nav>
             <div className='fixed -right-7 top-6 w-10 h-[2.083125rem] translate-x-full justify-between flex flex-col cursor-pointer lg:hidden' onClick={(e)=>{handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}>
                 <span className='w-full h-[0.3125rem] bg-[#ffffffb0] backdrop-blur-[8px] rounded-full origin-[left_center]' ref={menu1}></span>
