@@ -77,7 +77,7 @@ function FrameworksPages() {
         src="/images/techStack/tailwind.png"
         width={383}
         height={383}
-        name="TailwindCSS"
+        name="Tailwind"
       ></TechStack>
     </div>
   );
