@@ -4,6 +4,7 @@ import "./globals.css";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 config.autoAddCss = false
 
 const inter = Inter({ subsets: ["latin"] , variable:'--font-inter'});
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     // className='scroll-smooth'
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${sora.variable} ${poppins.variable} bg-[#0f0615] w-screen flex flex-col justify-center items-center overflow-x-hidden`}>{children}<Analytics/></body>
+      <body className={`${inter.variable} ${sora.variable} ${poppins.variable} bg-[#0f0615] w-screen flex flex-col justify-center items-center overflow-x-hidden`}>{children}<Analytics/><SpeedInsights/></body>
     </html>
   );
 }
