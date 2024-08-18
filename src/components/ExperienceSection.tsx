@@ -41,11 +41,12 @@ export default function ExperienceSection(){
         <div className='relative lg:w-[65%] lg:flex-row items-center' >
           <span className="invisible lg:visible absolute text-nowrap font-inter text-xl font-black left-3 cursor-pointer p-1 z-10 bg-white rounded-full bottom-3 select-none text-[#0f0615]" onClick={()=>scrollLeft(experienceGallery)}>&lt;--</span>
           <div className="relative w-full p-4 flex flex-col bg-[#ffffff17] rounded-2xl gap-5 h-[32.8125rem] overflow-y-scroll overflow-x-hidden lg:w-[100%] lg:flex-row lg:overflow-y-hidden lg:overflow-x-scroll lg:h-[17rem] lg:px-10 lg:py-1 lg:rounded-3xl lg:items-center lg:gap-6 lg:no-scrollbar transition-all scroll-smooth" ref={experienceGallery}>
+            <Experience src='/images/experiences/pmb.jpg' width={1080} height={1080} position='Student Mentor' org='PMB Fasilkom UI' date='August 2024 - Present'/>
+            <Experience src='/images/experiences/ddp0.jpg' width={800} height={800} position='Student Mentor' org='Dasar-Dasar Pemrograman 0' date='August 2024 - Present'/>
             <Experience src='/images/experiences/fuki.png' width={480} height={480} position='ITF Staff' org='Forum Ukhuwah dan Kajian Islam Fasilkom UI' date='Jun 2024 - Present'/>
-            <Experience src='/images/experiences/ddp0.jpg' width={800} height={800} position='Student Mentor' org='Dasar-Dasar Pemrograman 0' date='Jun 2024 - Present'/>
             <Experience src='/images/experiences/compfest.png' width={1860} height={1860} position='Event Staff' org='Compfest' date='May 2024 - Present'/>
-            <Experience src='/images/experiences/betis.jpg' width={200} height={200} position='Student Mentor' org='BETIS Fasilkom UI' date='Nov 2023'/>
-            <Experience src='/images/experiences/gaung.jpg' width={1080} height={1080} position='PIC of Operational Division' org='Gathering CSUI 23' date='Jun 2024 - Present'/>
+            <Experience src='/images/experiences/betis.jpg' width={200} height={200} position='Student Mentor' org='BETIS Fasilkom UI' date='Jan 2024 - May 2024'/>
+            <Experience src='/images/experiences/gaung.jpg' width={1080} height={1080} position='PIC of Operational Division' org='Gathering CSUI 23' date='Nov 2023'/>
           </div>
           <span className="invisible lg:visible absolute text-nowrap font-inter text-xl font-black right-3 cursor-pointer p-1 z-10 bg-white rounded-full bottom-3 select-none text-[#0f0615]" onClick={()=>scrollRight(experienceGallery)}>--&gt;</span>
         </div>
