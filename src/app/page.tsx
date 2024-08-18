@@ -26,7 +26,7 @@ export default function Home() {
   });document.addEventListener('mouseout', ()=>{cursor.current.style.display='none'})
   });
   return (
-    <main className='relative w-full flex flex-col justify-center items-center'>
+    <main className='relative w-full flex flex-col justify-center items-center max-w-[1536px]'>
       <Header refList={refList}/>
       <HeroSection ref={hero}/>
       <BioSection ref={bio}/>
