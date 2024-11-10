@@ -48,6 +48,12 @@ function LanguagesPages() {
         height={383}
         name="Typescript"
       ></TechStack>
+      <TechStack
+        src="/images/techStack/dart.png"
+        width={383}
+        height={383}
+        name="Dart"
+      ></TechStack>
       
     </div>
   );
@@ -78,6 +84,18 @@ function FrameworksPages() {
         width={383}
         height={383}
         name="Tailwind"
+      ></TechStack>
+      <TechStack
+        src="/images/techStack/django.png"
+        width={383}
+        height={383}
+        name="Django"
+      ></TechStack>
+      <TechStack
+        src="/images/techStack/flutter.png"
+        width={383}
+        height={383}
+        name="Flutter"
       ></TechStack>
     </div>
   );
