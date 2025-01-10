@@ -51,7 +51,14 @@ function Project(data:projectData){
                         <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/tailwind.png" alt="" width={200} height={200}/></div>
                         <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/firebase.png" alt="" width={200} height={200}/></div>
                     </div>)}/>
-                <Project type='Coming Soon' title='Coming Soon' desc='Coming Soon' url="" hrefRepo="" repoVis="invisible" href="" techStack={(<></>)}/>
+                <Project type='Web/Mobile Development' title='Jajan Jogja' desc='Jajan Jogja is a web and mobile application designed to help tourists plan their culinary journeys in Yogyakarta. Featuring restaurant search and a culinary trip planner, users can discover local delicacies based on location, price, and reviews, and seamlessly organize their culinary adventures on the go.' url="bg-[url('./../../public/images/projects/jajan-jogja.png')]" hrefRepo="https://github.com/orgs/PBP-A02-2024/repositories" repoVis="visible" href="https://farrel-reksa-jajanjogja.pbp.cs.ui.ac.id/" techStack={(
+                    <div className="w-fit h-9 flex justify-start items-center absolute bottom-3 gap-2 bg-[#4d4d4d42] p-2 rounded-xl ">
+                        <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/python.png" alt="" width={200} height={200}/></div>
+                        <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/dart.png" alt="" width={200} height={200}/></div>
+                        <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/django.png" alt="" width={200} height={200}/></div>
+                        <div className="w-4 h-4"><Image className="rounded-md" src="/images/techStack/flutter.png" alt="" width={200} height={200}/></div>
+                        <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/tailwind.png" alt="" width={200} height={200}/></div>
+                    </div>)}/>
                 <Project type='Coming Soon' title='Coming Soon' desc='Coming Soon' url="" hrefRepo="" repoVis="invisible" href="" techStack={(<></>)}/>
             </div>
         </section>
