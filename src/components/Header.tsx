@@ -1,6 +1,6 @@
 import Image from "next/image"
-import { MutableRefObject, useEffect, useRef, useState } from "react"
-
+import { MutableRefObject, useRef, useState } from "react"
+import SplitText from "./SplitText.jsx"
 function handleMenu(status:boolean, listRef:MutableRefObject<HTMLSpanElement>[]){
     if(!status){
         listRef[0].current.classList.add('animate-navSlideRight');
@@ -50,7 +50,19 @@ export default function Header(props:{refList:MutableRefObject<HTMLDivElement>[]
         <header className='fixed p-8 pt-20 w-[12.5rem] h-screen bg-[#ffffff17] rounded-r-3xl backdrop-blur-[0.5rem] top-0 flex flex-col justify-start z-50 -translate-x-full self-start lg:translate-x-0 lg:self-center lg:w-[90%] lg:p-0 lg:h-[4.4rem] lg:flex-row lg:top-3 lg:rounded-full lg:items-center lg:px-4  lg:justify-between max-w-[1536px]' ref={header}>
             <div className='flex flex-col mt-5 mb-2 gap-3 lg:flex-row lg:h-20 lg:m-0 lg:items-center lg:gap-4'>
                 <a href=""><Image className='w-16 lg:w-auto lg:h-12' src='/images/LOGO.png' alt='' width={1500} height={1500}></Image></a>
-                <h1 className='font-poppins text-white font-semibold text-2xl lg:text-xl xl:text-2xl'>Nabeel Muhammad</h1>
+                {/* <h1 className='font-poppins text-white font-semibold text-2xl lg:text-xl xl:text-2xl'>Nabeel Muhammad</h1> */}
+                <SplitText
+                    text="Nabeel Muhammad"
+                    className="font-poppins text-white font-semibold text-2xl lg:text-xl xl:text-2xl"
+                    delay={125}
+                    animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
+                    animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+                    easing="easeOutCubic"
+                    threshold={0.2}
+                    rootMargin="50px"
+                    onLetterAnimationComplete={()=>{}}
+                    textAlign="start"
+                />
             </div>
             <nav className='flex flex-col gap-8 my-16 font-inter text-white font-normal text-lg p-1 lg:flex-row lg:gap-20 lg:text-[1rem] lg:items-center lg:my-0 lg:mr-12 lg:select-none'>
                 <a className='cursor-pointer hover:font-medium hover:scale-105 lg:text-center lg:w-16 transition-all duration-500' onClick={(e)=>{scrollTo(props.refList[0]);if(window.innerWidth<1024){setOpenMenu(!openMenu);handleMenu(openMenu, [header, menu1, menu2, menu3]);setOpenMenu(!openMenu)}}}>Home</a>
