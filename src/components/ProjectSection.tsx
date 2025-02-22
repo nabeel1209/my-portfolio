@@ -59,7 +59,14 @@ function Project(data:projectData){
                         <div className="w-4 h-4"><Image className="rounded-md" src="/images/techStack/flutter.png" alt="" width={200} height={200}/></div>
                         <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/tailwind.png" alt="" width={200} height={200}/></div>
                     </div>)}/>
-                <Project type='Coming Soon' title='Coming Soon' desc='Coming Soon' url="" hrefRepo="" repoVis="invisible" href="" techStack={(<></>)}/>
+                <Project type='Web Development' title='DocuForge' desc='DocuForge is an AI-powered platform that simplifies legal document creation. Users can generate precise, professional documents by inputting key details through guided prompts. With a seamless workflow—from account registration to document management—DocuForge ensures speed, accuracy, and efficiency.' url="bg-[url('./../../public/images/projects/docuforge.png')]" hrefRepo="https://github.com/Docu-Forge" repoVis="visible" href="https://docuforge-fe-production.up.railway.app/" techStack={(
+                    <div className="w-fit h-9 flex justify-start items-center absolute bottom-3 gap-2 bg-[#4d4d4d42] p-2 rounded-xl ">
+                        <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/typescript.png" alt="" width={200} height={200}/></div>
+                        <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/react.png" alt="" width={200} height={200}/></div>
+                        <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/nextjs.png" alt="" width={200} height={200}/></div>
+                        <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/tailwind.png" alt="" width={200} height={200}/></div>
+                        <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/supabase.jpg" alt="" width={200} height={200}/></div>
+                    </div>)}/>
             </div>
         </section>
     )

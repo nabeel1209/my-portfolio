@@ -5,6 +5,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import SEOHead from "@/components/SEOHead";
 config.autoAddCss = false
 
 const inter = Inter({ subsets: ["latin"] , variable:'--font-inter'});
@@ -13,8 +14,45 @@ const sora = Sora({subsets:['latin'], variable:'--font-sora'})
 
 export const metadata: Metadata = {
   title: "Nabeel's Portfolio",
-  description: "Hello! I'm Nabeel, a dedicated Information System student at Universitas Indonesia with an interest in business, data science, and programming. I have a high curiosity to learn more about my interests. I am capable in problem-solving, prioritizing tasks, and providing creative ideas. This portfolio showcases my projects, skills, and experiences that reflect my journey in the field of Information Systems",
+  description: "I'm Nabeel, an Information Systems student at University of Indonesia passionate about business, data science, and programming. Explore my projects, skills, and experiences in web development, analytics, and problem-solving.",
+  keywords: [
+    "Nabeel Muhammad",
+    "Information Systems",
+    "Data Science",
+    "Programming",
+    "Web Development",
+    "Business Analytics",
+    "Data Analytics",
+    "Software Engineering",
+    "Problem-Solving",
+  ],
+  authors: [{ name: "Nabeel Muhammad", url: "https://nabeelmuhammad.me" }],
+  openGraph: {
+    title: "Nabeel's Portfolio",
+    description:
+      "Explore my projects, skills, and experiences in web development, data science, and business analytics.",
+    url: "https://nabeelmuhammad.me",
+    siteName: "Nabeel Muhammad Portfolio",
+    images: [
+      {
+        url: "https://nabeelmuhammad.me/_next/image?url=%2Fimages%2FLOGO.png&w=3840&q=75",
+        width: 620,
+        height: 620,
+        alt: "Nabeel Muhammad's Portfolio",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nabeel's Portfolio",
+    description:
+      "Explore my journey in web development, data science, and programming.",
+    images: ["https://nabeelmuhammad.me/_next/image?url=%2Fimages%2FLOGO.png&w=3840&q=75"],
+  },
+  metadataBase: new URL("https://nabeelmuhammad.me"),
 };
+
 
 export default function RootLayout({
   children,
@@ -27,7 +65,7 @@ export default function RootLayout({
         {children}
         <Analytics/>
         <SpeedInsights/>
-        </body>
+      </body>
     </html>
   );
 }

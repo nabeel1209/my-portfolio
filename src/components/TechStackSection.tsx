@@ -109,6 +109,12 @@ function DatabasesPages() {
         height={383}
         name="Firebase"
       ></TechStack>
+      <TechStack
+        src="/images/techStack/supabase.jpg"
+        width={383}
+        height={383}
+        name="Supabase"
+      ></TechStack>
     </div>
   );
 }
