@@ -67,6 +67,14 @@ function Project(data:projectData){
                         <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/tailwind.png" alt="" width={200} height={200}/></div>
                         <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/supabase.jpg" alt="" width={200} height={200}/></div>
                     </div>)}/>
+                <Project type='Web Development' title='UIWB Website' desc='UI Women in Business is a student-led platform from Universitas Indonesia that empowers women through career exploration and gender education. Rooted in the values of Empower, Connect, and Grow, it offers programs, events, and mentorship to help female students build skills, expand networks, and navigate their professional journeys with confidence.' url="bg-[url('./../../public/images/projects/UIWB-website.png')]" hrefRepo="" repoVis="invisible" href="https://uiwomeninbusiness.com/" techStack={(
+                    <div className="w-fit h-9 flex justify-start items-center absolute bottom-3 gap-2 bg-[#4d4d4d42] p-2 rounded-xl ">
+                        <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/typescript.png" alt="" width={200} height={200}/></div>
+                        <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/react.png" alt="" width={200} height={200}/></div>
+                        <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/nextjs.png" alt="" width={200} height={200}/></div>
+                        <div className="w-5 h-5"><Image className="rounded-md" src="/images/techStack/tailwind.png" alt="" width={200} height={200}/></div>
+                    </div>)}/>
+                {/* <div className="w-full lg:w-[47%]"></div> */}
             </div>
         </section>
     )

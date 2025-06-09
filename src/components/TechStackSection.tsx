@@ -97,6 +97,12 @@ function FrameworksPages() {
         height={383}
         name="Flutter"
       ></TechStack>
+      <TechStack
+        src="/images/techStack/expo.png"
+        width={383}
+        height={383}
+        name="Expo"
+      ></TechStack>
     </div>
   );
 }
@@ -114,6 +120,12 @@ function DatabasesPages() {
         width={383}
         height={383}
         name="Supabase"
+      ></TechStack>
+      <TechStack
+        src="/images/techStack/postgres.png"
+        width={383}
+        height={383}
+        name="PostgreSQL"
       ></TechStack>
     </div>
   );
